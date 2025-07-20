@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.4) 0%, 
+      rgba(240, 244, 255, 0.4) 25%, 
+      rgba(230, 237, 255, 0.4) 50%, 
+      rgba(220, 230, 255, 0.4) 75%, 
+      rgba(210, 225, 255, 0.4) 100%
+    );
+    @apply text-black;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-royal-200 bg-opacity-40 hover:bg-royal-300 hover:bg-opacity-40 text-black font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-50 bg-opacity-40 hover:bg-royal-50 hover:bg-opacity-40 text-black font-semibold py-3 px-6 rounded-lg transition-all duration-200 border-2 border-royal-200 border-opacity-40 shadow-lg hover:shadow-xl;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.4) 0%, 
+      rgba(240, 244, 255, 0.4) 25%, 
+      rgba(230, 237, 255, 0.4) 50%, 
+      rgba(220, 230, 255, 0.4) 75%, 
+      rgba(210, 225, 255, 0.4) 100%
+    );
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #1f2bff 0%, #3b4bff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .aesthetic-shadow {
+    box-shadow: 0 20px 40px rgba(59, 75, 255, 0.1), 0 8px 16px rgba(59, 75, 255, 0.05);
+  }
+
+  .aesthetic-card {
+    @apply bg-gray-50 bg-opacity-40 backdrop-blur-sm border border-royal-200 border-opacity-40 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2;
+    box-shadow: 0 10px 30px rgba(59, 75, 255, 0.08), 0 4px 12px rgba(59, 75, 255, 0.04);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+} 
