@@ -83,7 +83,7 @@ import RightZigzag from './login-elements-right/zigzag-right.svg';
 import RightEllipse from './login-elements-right/ellipse-right.svg';
 
 
-export default {
+const svgExports = {
   SolanaDot,
   SplashText,
   GettingStartedButton,
@@ -168,3 +168,5 @@ export default {
   RightZigzag,
   RightEllipse,
 };
+
+export default svgExports;

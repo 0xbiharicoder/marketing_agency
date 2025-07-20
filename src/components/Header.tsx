@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -30,9 +31,9 @@ export default function Header() {
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl lg:text-3xl font-bold text-black hover:text-gray-700 transition-colors duration-200">
+            <Link href="/" className="text-2xl lg:text-3xl font-bold text-black hover:text-gray-700 transition-colors duration-200">
               DigitalAgency
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}

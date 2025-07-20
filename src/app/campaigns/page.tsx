@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Header from '../../components/Header'
 
 export default function Campaigns() {
@@ -201,10 +202,11 @@ export default function Campaigns() {
                 >
                   {/* Campaign Image */}
                   <div className="relative overflow-hidden h-64">
-                    <img
+                    <Image
                       src={campaign.image}
                       alt={campaign.title}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-royal-900 bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <button className="bg-gray-50 text-black px-4 py-2 rounded-lg font-medium transform hover:scale-105">
